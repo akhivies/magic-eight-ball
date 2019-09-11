@@ -3,7 +3,7 @@ import java.util.Random;
 public class Magic8 {
 
     // generate a random int between the range provided.
-    private static int getRandomNumberInRange(int min, int max) {
+    public static int getRandomNumberInRange(int min, int max) {
 
         Random r = new Random();
         return r.ints(min, (max + 1)).limit(1).findFirst().getAsInt();
@@ -85,10 +85,10 @@ public class Magic8 {
             System.out.print("-");
         }
         System.out.println("\n| " + result + " |");
-        // Print to console if result of roll was positive, nuetral or negative.
         for (int i = 0; i < result.length() + 4; i++) {
             System.out.print("-");
         }
+        // Print to console if result of roll was positive, nuetral or negative.
         if (roll < 11) {
             System.out.println("\nThe result was positive! Hooray!");
         } else if (roll < 16) {
